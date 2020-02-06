@@ -23,9 +23,9 @@ int main(void)
 	if (x == 0)
 	printf("%s %d %s %d %s\n", str1, n, str2, x, str4);
 	else if (x > 5)
-	printf("%s %d %s %x %s\n", str1, n, str2, x, str3);
+	printf("%s %d %s %d %s\n", str1, n, str2, x, str3);
 	else
-	printf("%s %d %s %x %s\n", str1, n, str2, x, str5);
+	printf("%s %d %s %d %s\n", str1, n, str2, x, str5);
 	return (0);
 
 }
