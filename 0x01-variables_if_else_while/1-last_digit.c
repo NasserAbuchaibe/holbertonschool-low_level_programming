@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int n;
+	int n, x;
 	char str1[] = "Last digit of";
 	char str2[] = "is";
 	char str3[] = "and is greater than 5";
@@ -18,7 +18,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	int x = n % 10;
+	x = n % 10;
 
 	if (x == 0)
 	printf("%s %d %s %d %s\n", str1, n, str2, x, str4);
