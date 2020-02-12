@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _abs - computes the absolute value of an integer.
+ * @n: integer.
+ * Return: n.
  */
 int _abs(int n)
 {
