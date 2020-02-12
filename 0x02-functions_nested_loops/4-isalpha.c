@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _isalpha - prints checkks for or uppercase.
+ **@c: the integer to print
+ * Return:0
  */
 int _isalpha(int c)
 {
