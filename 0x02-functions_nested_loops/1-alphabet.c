@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * 1-alphabet.c - pritns the alphabet
+ *@alph: the integer to print
  * Return: Always 0.
  */
 void print_alphabet(void)
@@ -11,7 +11,7 @@ void print_alphabet(void)
 
 	for (alph = 'a'; alph <= 'z'; alph++)
 	{
-	_putchar(alph);
+		_putchar(alph);
 	}
 	_putchar('\n');
 }
