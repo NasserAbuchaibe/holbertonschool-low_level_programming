@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	int _islower(int c);
-	return (0);
+    print_alphabet();
+    return (0);
 }
