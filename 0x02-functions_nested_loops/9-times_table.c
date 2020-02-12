@@ -1,38 +1,38 @@
 #include "holberton.h"
-
 /**
- * jack_bauer - prints every minute of the day starting from 00:00 to 23:59.
- * @a - @b - @c, @d: integers.
+ * times_table - this function prints time table
  *
- * Return: 0.
+ * Return: 0
  */
-void jack_bauer(void)
+void times_table(void)
 {
-	int a, b, c, d;
+	int i, j, r, tot;
 
-	for (a = '0' ; a <= '2' ; a++)
+	for (i = 0; i <= 9; i++)
 	{
-		for (b = '0' ; b <= '9' ; b++)
+		r = i * 0;
+
+		_putchar((char)('0' + r));
+		for (j = 1; j <= 9; j++)
 		{
-			for (c = '0' ; c <= '5' ; c++)
+			tot = i * j;
+
+			if (tot > 9)
 			{
-				for (d = '0' ; d <= '9' ; d++)
-				{
-				if (!(a == '2' && b == '4' && c == '0' && d == '0'))
-				{
-					_putchar(a);
-					_putchar(b);
-					_putchar(':');
-					_putchar(c);
-					_putchar(d);
-					_putchar('\n');
-				}
-				else
-				{
-					return;
-				}
-				}
+				_putchar(',');
+				_putchar(' ');
+				_putchar((char)((tot / 10) + '0'));
+				_putchar((char)((tot % 10) + '0'));
+			}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar((char)(tot + '0'));
 			}
 		}
+		_putchar('\n');
+
 	}
 }
