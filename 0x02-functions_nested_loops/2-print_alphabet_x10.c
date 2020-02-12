@@ -3,8 +3,7 @@
 /**
  * print_alphabet_x10 - print alphabet x10
  * @x: counter to do 10 cycles
- * @alph: print the alphabet
- * Return: Always 0.
+ * @alph: print the alphabet.
  */
 void print_alphabet_x10(void)
 {
