@@ -8,9 +8,9 @@ int main(void)
 {
 	int x, su;
 
-	for (x = 0; x <= 1024; i++)
+	for (x = 0; x <= 1024; x++)
 	{
-		if ((i % 5 == 0) || (i % 3 == 0))
+		if ((x % 5 == 0) || (x % 3 == 0))
 		{
 			su = su + x;
 		}
