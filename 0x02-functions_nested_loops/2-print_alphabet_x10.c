@@ -1,19 +1,21 @@
 #include "holberton.h"
 /**
  * print_alphabet_x10 - print alphabet x10
- *
- * Return: Always 0.
+ * @alph: print alphabet
+ * @x: loop 10 time
+ * Return: void
  */
 void print_alphabet_x10(void)
 {
-	int alph, x;
+	int alph;
+	char x;
 
-	for (x = 1 ; x <= 10 ; x++)
+	for (x = 0 ; x <= 9 ; x++)
 	{
-	for (alph = 'a' ; alph <= 'z' ; alph++)
-	{
-	 _putchar(alph);
-	}
-	_putchar('\n');
+		for (alph = 'a' ; alph <= 'z' ; alph++)
+		{
+	 		_putchar(alph);
+		}
+		_putchar('\n');
 	}
 }
