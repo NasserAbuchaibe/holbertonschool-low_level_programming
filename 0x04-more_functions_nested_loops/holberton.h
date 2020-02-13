@@ -1,6 +1,7 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
+void more_numbers(void);
 void print_numbers (void);
 int mul(int a, int b);
 int _isdigit(int c);
