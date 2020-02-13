@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_to_98
+ * print to 98
  * @n: integer variable
  * Return: n
  */
@@ -21,7 +21,7 @@ void print_to_98(int n)
 	{
 		for (; n >= 98; n--)
 		{
-			if (n !=98)
+			if (n != 98)
 				printf("%d, ", n);
 			else
 				printf("%d\n", n);
