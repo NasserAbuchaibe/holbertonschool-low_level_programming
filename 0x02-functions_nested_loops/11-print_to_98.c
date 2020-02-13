@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print to 98
- * @n: integer variable
- * Return:@n
+ * print_to_98 - Function that print to number 98
+ * @n: integer
+ * Return:void
  */
 void print_to_98(int n)
 {
