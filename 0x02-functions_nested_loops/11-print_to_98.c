@@ -1,12 +1,10 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_alphabet_x10 - print alphabet x10
- * @alph: print alphabet
- * @x: loop 10 time
- * Return: void
+ * print_to_98
+ * @n: integer variable
+ * Return: n
  */
-
 void print_to_98(int n)
 {
 	if (n <= 98)
