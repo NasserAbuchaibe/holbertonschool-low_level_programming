@@ -3,7 +3,7 @@
 /**
  * print to 98
  * @n: integer variable
- * Return: n
+ * Return:@n
  */
 void print_to_98(int n)
 {
