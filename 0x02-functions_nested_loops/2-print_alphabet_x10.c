@@ -1,8 +1,6 @@
 #include "holberton.h"
 /**
  * print_alphabet_x10 - print alphabet x10
- * @alph: print alphabet
- * @x: loop 10 time
  * Return: void
  */
 void print_alphabet_x10(void)
@@ -14,7 +12,7 @@ void print_alphabet_x10(void)
 	{
 		for (alph = 97; alph <= 122; alph++)
 		{
-	 		_putchar(alph);
+			_putchar(alph);
 		}
 		_putchar('\n');
 	}
