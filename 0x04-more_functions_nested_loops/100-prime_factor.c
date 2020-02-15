@@ -8,21 +8,18 @@ int main(void)
 {
 	long int n = 612852475143;
 	long int d;
-	long int aux;
 
-	for (d = 2; d <= n; d++)
+	for (d = 2; d < n; d++)
 	{
 		if (n % d == 0)
 		{
-			aux = d;
 			while (n % d == 0)
 			{
 				n /= d;
 			}
 		}
 	}
-	printf("%ld\n", aux);
-	
+	printf("%ld\n", d);
 	return (0);
 }
 
