@@ -14,6 +14,7 @@ void rev_string(char *s)
 
 	y = 0;
 	z = 0;
+
 	for (x = 0; s[x] != '\0'; x++)
 	{
 		aux[x] = s[x];
@@ -23,6 +24,6 @@ void rev_string(char *s)
 	{
 
 		s[c] = aux[z];
-		z++;
+	z++;
 	}
 }
