@@ -24,14 +24,15 @@ void puts_half(char *str)
 			{
 			_putchar(str[y]);
 			}
+		_putchar('\n');
 	}
 	else
 	{
 		x = cont / 2;
-		for (y = x; y <= cont; y++)
+		for (y = x; y < cont; y++)
 		{
 			_putchar(str[y]);
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
