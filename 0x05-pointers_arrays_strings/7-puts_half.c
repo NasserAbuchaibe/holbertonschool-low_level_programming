@@ -20,6 +20,7 @@ void puts_half(char *str)
 	if (cont % 2 != 0)
 	{
 		x = (cont - 1) / 2;
+		x = x + 1;
 	}
 	for (y = x; str[y] != '\0'; y++)
 	{
