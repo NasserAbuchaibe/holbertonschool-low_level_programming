@@ -17,7 +17,7 @@ void rev_string(char *s)
 		aux = s[x];
 		cont = x;
 	}
-	for (x = 0; x <= cont; x++)
+	for (x = 0; x < cont; x++)
 	{
 		cont--;
 		aux = s[x];
