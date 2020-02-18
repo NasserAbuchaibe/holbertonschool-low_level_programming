@@ -3,6 +3,7 @@
 
 /**
  * _strlen - count a string
+ * @s: string
  * Return: int
  */
 
