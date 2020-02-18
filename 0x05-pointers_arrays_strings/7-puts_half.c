@@ -3,7 +3,7 @@
 /**
  * puts_half - Write a function that prints a string
  * @str: string
- * Return: void
+ * Return: half string
  */
 
 void puts_half(char *str)
@@ -17,22 +17,14 @@ void puts_half(char *str)
 		cont++;
 		aux = str[cont];
 	}
+	x = cont / 2;
 	if (cont % 2 != 0)
 	{
 		x = (cont - 1) / 2;
-		for (y = x; str[y] != '\0'; y++)
-			{
-			_putchar(str[y]);
-			}
-		_putchar('\n');
 	}
-	else
+	for (y = x; str[y] != '\0'; y++)
 	{
-		x = cont / 2;
-		for (y = x; str[y] != '\0'; y++)
-		{
-			_putchar(str[y]);
-		}
-		_putchar('\n');
+		_putchar(str[y]);
 	}
+	_putchar('\n');
 }
