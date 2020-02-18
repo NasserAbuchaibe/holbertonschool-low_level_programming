@@ -9,10 +9,9 @@
 
 void rev_string(char *s)
 {
-	char aux;
+	char aux = s[0];
 	int x, cont;
 
-	aux = s[0];
 	for (x = 0; aux != '\0'; x++)
 	{
 		aux = s[x];
