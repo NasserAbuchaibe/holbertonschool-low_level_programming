@@ -17,21 +17,21 @@ void puts_half(char *str)
 		cont++;
 		aux = str[cont];
 	}
-		if (cont % 2 != 0)
-		{
-			x = (cont - 1) / 2;
-			for (y = x; y < cont; y++)
+	if (cont % 2 != 0)
+	{
+		x = (cont - 1) / 2;
+		for (y = x; y < cont; y++)
 			{
 			_putchar(str[y]);
 			}
-		}
-		else
+	}
+	else
+	{
+		x = cont / 2;
+		for (y = x; y < cont; y++)
 		{
-			x = cont / 2;
-			for (y = x; y < cont; y++)
-			{
-				_putchar(str[y]);
-			}
+			_putchar(str[y]);
 		}
+	}
 	_putchar('\n');
 }
