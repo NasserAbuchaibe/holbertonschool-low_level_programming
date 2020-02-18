@@ -11,9 +11,9 @@ void rev_string(char *s)
 {
 	char aux[50];
 	int x, y, z, c;
+
 	y = 0;
 	z = 0;
-
 	for (x = 0; s[x] != '\0'; x++)
 	{
 		aux[x] = s[x];
