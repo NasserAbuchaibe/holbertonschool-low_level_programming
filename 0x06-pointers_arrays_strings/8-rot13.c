@@ -27,7 +27,7 @@ char *rot13(char *c)
 				c[x] = c[x] + code;
 				y = 51;
 			}
-		code = code * -1;
+			code = code * -1;
 		}
 	}
 	return (c);
