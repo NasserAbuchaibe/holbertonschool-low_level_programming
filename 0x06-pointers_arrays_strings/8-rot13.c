@@ -8,26 +8,22 @@
  */
 char *rot13(char *c)
 {
-	char rot[] = {'A', 'N', 'a', 'n', 'B', 'O', 'b', 'o',
-		'C', 'P', 'c', 'p', 'D', 'Q', 'd', 'q', 'E', 'R',
-		'e', 'r', 'F', 'S', 'f', 's', 'G', 'T', 'g', 't',
-		'H', 'U', 'h', 'u', 'I', 'V', 'i', 'v', 'J', 'W',
-		'j', 'w', 'K', 'X', 'k', 'x', 'L', 'Y', 'l', 'y',
-		'M', 'Z', 'm', 'z'};
-	int x, y, code;
+	char rot1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int x, y;
 
-	code = 13;
 
 	for (x = 0; c[x] != '\0'; x++)
 	{
-		for (y = 0; y <= 51; y++)
+		y = 0;
+		while ((c[x] >= 'a' && c[x] <= 'z') || (c[x] >= 'A' && c[x] <= 'Z'))
 		{
-			if (c[x] == rot[y])
+			if (c[x] == rot1[y])
 			{
-				c[x] = c[x] + code;
-				y = 51;
+				c[x] = rot2[y];
+				break;
 			}
-			code = code * -1;
+			y++;
 		}
 	}
 	return (c);
