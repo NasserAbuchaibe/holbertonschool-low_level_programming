@@ -9,17 +9,19 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int x, count;
+	unsigned int x, y, count;
 
 	count = 0;
 
-	for (x = 0; (s[x] != '\0') && (accept[x] != '\0') ; x++)
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		if (s[x] == accept[x])
+		for (y = 0; accept[y] != '\0'; y++)
 		{
-			count++;
+			if (s[x] == accept[y])
+			{
+				count++;
+			}
 		}
 	}
-	x+=1;
-	return (x = x - count);
+	return (count);
 }
