@@ -8,17 +8,18 @@
  */
 int sqtr1(int n, int x)
 {
-	int y;
-
-	if (x * x < n)
+	if ((x * x > n))
+	{
+		return (-1);
+	}
+	else if (x * x == n)
+	{
+		return (x);
+	}
+	else
 	{
 		return (sqtr1(n, x + 1));
 	}
-	else if (!(x * x == n))
-	{
-		y = -1;
-	}
-	return (y);
 }
 
 /**
