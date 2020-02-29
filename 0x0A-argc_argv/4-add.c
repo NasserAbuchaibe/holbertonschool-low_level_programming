@@ -17,17 +17,20 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
-	for (x = 1; argv[x] != '\0'; x++)
+	else
 	{
-		if (!isdigit(*(argv[x])))
+		for (x = 1; argv[x] != '\0'; x++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(*(argv[x])))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			else
+			{
+				y = y + atoi(argv[x]);
+			}
 		}
-	}
-	for (x = 1; argv[x] != '\0'; x++)
-	{
-		y = y + atoi(argv[x]);
 	}
 	printf("%d\n", y);
 	return (0);
