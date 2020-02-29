@@ -9,7 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int x, y;
+	int x;
+	unsigned int y;
 
 	y = 0;
 
