@@ -1,37 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - sum 2 number
+ * isdigi - check if it is a digit
+ *
+ * @z: the integer print
+ *
+ * Return: the variable digit
+ */
+
+int isdigi(char *z)
+{
+	for (; *z != '\0'; z++)
+	{
+		if (*z < 0 || *z > '9')
+		{
+			return (0);
+		}
+	}
+	return (1);
+
+}
+/**
+ * main - sum
  * @argc: The number of command line arguments
  * @argv: An array containing the program command line arguments
  * Return: int
  */
 int main(int argc, char *argv[])
 {
-	int x;
-	unsigned int y;
+	int x, sum;
 
-	y = 0;
-
-	if (argc < 1)
+	sum = 0;
+	if (argc == 0)
 	{
 		printf("0\n");
 	}
-	else
+	for (x = 1; x < argc ; x++)
 	{
-		for (x = 1; argv[x] != '\0'; x++)
+		if (isdigi(argv[x]))
+			sum += atoi(argv[x]);
+		else
 		{
-			if (!isdigit(*(argv[x])))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			else
-			{
-				y = y + atoi(argv[x]);
-			}
+			printf("Error\n");
+			return (1);
 		}
 	}
-	printf("%d\n", y);
+	printf("%d\n", sum);
 	return (0);
 }
