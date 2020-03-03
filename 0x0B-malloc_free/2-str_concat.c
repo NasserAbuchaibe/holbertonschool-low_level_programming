@@ -14,8 +14,10 @@ char *str_concat(char *s1, char *s2)
 	int z, w, c;
 	char *conc;
 
-	if ((s1 == NULL) || (s2 == NULL))
-		s1 = s2 = "";
+	if ((s1 == NULL))
+		s1 = "";
+	if ((s2 == NULL))
+		s2 = "";
 	while (s1[x] != '\0')
 		x++;
 	while (s2[y] != '\0')
@@ -25,9 +27,7 @@ char *str_concat(char *s1, char *s2)
 	if (conc == NULL)
 		return (NULL);
 	for (z = 0; s1[z] != '\0'; z++)
-	{
 		conc[z] = s1[z];
-	}
 	for (w = 0; s2[w] != '\0'; w++)
 	{
 		conc[z] = s2[w];
