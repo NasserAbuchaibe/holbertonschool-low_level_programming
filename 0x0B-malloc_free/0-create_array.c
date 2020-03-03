@@ -13,6 +13,20 @@ char *create_array(unsigned int size, char c)
 {
 	char *n;
 
-	n = malloc(size * sizeof(c));
-	return (n);
+	if (size == 0)
+	{
+		return ('\0');
+	}
+	else
+	{
+		n = malloc(size * sizeof(c));
+		if (n == 0)
+		{
+			return ('\0');
+		}
+		else
+		{
+			return (n);
+		}
+	}
 }
