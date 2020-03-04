@@ -4,7 +4,7 @@
  * argstostr - concatenates all the arguments of your program.
  * @ac: int input
  * @av: double pointer array
- * Return: str
+ * Return: s
  */
 char *argstostr(int ac, char **av)
 {
