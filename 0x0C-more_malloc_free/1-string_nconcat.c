@@ -1,40 +1,42 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "holberton.h"
+#include <stdlib.h>
+#include <string.h>
 /**
- * string_nconcat - concatenates two strings.
- * @s1: string 1
- * @s2: string 2
- * @n: size str2
- * Return: char
- */
-
+* string_nconcat - concatenates two strings.
+* @s1: pointer string 1
+* @s2: pointer string 2
+* @n: size
+* Return: new string
+*/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int x = 1, y = 1, z, w, c;
-	char *conc;
+	unsigned int j, i, len1 = 0, len2 = 0;
+	char *s3;
 
 	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	while (s1[x] != '\0')
-		x++;
-	while (s2[y] != '\0')
-		y++;
-	if (y > n)
-		y = n;
-	c = x + y;
-	conc = malloc(sizeof(char) * (c + 1));
-	if (conc == NULL)
-		return (NULL);
-	for (z = 0; s1[z] != '\0'; z++)
-		conc[z] = s1[z];
-	for (w = 0; w < y; w++)
+		len1 = 0;
+	else
 	{
-		conc[z] = s2[w];
-		z++;
+		while (s1[len1] != '\0')
+			len1++;
 	}
-	conc[c] = '\0';
-	return (conc);
+	if (s2 == NULL)
+		len2 = 0;
+	else
+	{
+		while (s2[len2] != '\0')
+			len2++;
+	}
+	if (len2 > n)
+		len2 = n;
+	s3 = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (s3 == NULL)
+		return (s3);
+	for (i = 0; i < len1; i++)
+		s3[i] = s1[i];
+	for (j = 0; j < len2; j++)
+		s3[len1 + j] = s2[j];
+
+	s3[len1 + len2] = '\0';
+	return (s3);
 }
