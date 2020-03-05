@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		m[w] = s1[w];
 	}
-	for (z = 0; z <= n; z++)
+	for (z = 0; z < n; z++)
 	{
 		m[w] = s2[z];
 		w++;
