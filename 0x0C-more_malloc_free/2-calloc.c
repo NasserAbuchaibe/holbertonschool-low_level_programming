@@ -24,7 +24,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	else
 	{
-		for (x = 0; x < nmemb; x++)
+		for (x = 0; x < (nmemb * size); x++)
 		{
 			p1[x] = '\0';
 		}
