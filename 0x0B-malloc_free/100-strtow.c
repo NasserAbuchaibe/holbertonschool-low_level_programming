@@ -8,36 +8,42 @@
 
 char **strtow(char *str)
 {
-	int x, y, z, w = 1, cont = 0, word = 0;
+	int x, y = 0, z, w = 1, v, cont = 0, word = 0;
 	char **m;
 
-	if ((str == NULL) || (str == ""))
+	if (str == NULL)
 		return (NULL);
 	for (x = 0; str[x] != '\0'; x++)
 	{
-		if(str[x] != " ")
+		if(str[x] != ' ')
 			cont++;
-		if(str[x] == " " && str[x] > 0 && str[x - 1] != " ")
+		if(str[x] == ' ' && x > 0 && str[x - 1] != ' ')
 			word++;
 	}
 	m = malloc(sizeof(char *) * (word + 1));
 	if (m == NULL)
 		return (NULL);
-	for (v = 0; v < cont; v++)
+	for (x = 0; x < word; x++)
 	{
-		m[v] = malloc(sizeof(char) * cont
-}
-	for (x = 0; m[x] < word; x++)
-	{
-		for (y = 0; str[y] != '\0' && str[y] == " " && str[y - 1])
+		for (v = 0; str[v] != '\0'; v++)
 		{
+			if(str[v] != ' ')
+				m[x] = malloc(sizeof(char));
+		}
+	}
+	for (x = 0; x < word; x++)
+	{
 			for (z = 0; str[z] != '\0'; z++)
 			{
-				if(str[z] != " " && str[z - w] == " " && str[w + 1] == " ")
-					m[x][z] = str[z];
+					m[x][y] = str[z];
+					if (str[z] == ' ' && str[z - 1] != ' ')
+					{
+						y++;
+						break;
+					}
+					
 			}
 			w++;
-		}
 	}
 	return (m);
 }
