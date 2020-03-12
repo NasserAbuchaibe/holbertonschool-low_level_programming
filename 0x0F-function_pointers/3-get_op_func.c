@@ -9,6 +9,7 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
+
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
@@ -17,15 +18,16 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 		};
-	int x = 0;
+	int x;
 
+	x = 0;
 	while (ops[x].op != NULL)
 	{
-		if (!(strcmp(ops[x].op, s)))
-		{
+		if (strcmp(ops[x].op, s) == 0)
 			return (ops[x].f);
-		}
 		x++;
 	}
+	printf("Error\n");
+	exit(99);
 	return (NULL);
 }
