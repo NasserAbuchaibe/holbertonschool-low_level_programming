@@ -23,5 +23,7 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", get_op_func(argv[2])(n1, n2));
 	}
+	printf("Error\n");
+	exit(98);
 	return (0);
 }
