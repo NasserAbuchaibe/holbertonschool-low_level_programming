@@ -26,21 +26,21 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(m, double));
 				break;
 			case 's':
-			p = va_arg(m, char*);
-			if (p != NULL)
-			{
-				printf("%s", p);
+				p = va_arg(m, char*);
+				if (p != NULL)
+				{
+					printf("%s", p);
+					break;
+				}
+				printf("(nill)");
 				break;
-			}
-			printf("(nill)");
-			break;
 			default:
 				y = 0;
 		}
-			if (format[x + 1] != 0 && y)
-				printf(", ");
-			x++;
-			y++;
+		if (format[x + 1] != 0 && y)
+			printf(", ");
+		x++;
+		y++;
 	}
 	printf("\n");
 	va_end(m);
