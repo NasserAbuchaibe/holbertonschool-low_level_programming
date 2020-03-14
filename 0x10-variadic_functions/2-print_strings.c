@@ -26,7 +26,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", p);
 			}
 			if (x < n - 1)
-				printf("%c ", *separator);
+				printf("%s", separator);
 		}
 	printf("\n");
 	va_end(m);
