@@ -32,7 +32,7 @@ void print_all(const char * const format, ...)
 					printf("%s", p);
 					break;
 				}
-				printf("(nill)");
+				printf("(nil)");
 				break;
 			default:
 				y = 0;
