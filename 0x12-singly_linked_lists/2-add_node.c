@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * add_node - adds a new node at the beginning of a list
  * @head: pointer to head list
@@ -8,7 +9,7 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	int x,
+	int x;
 	list_t *new;
 
 	if (head == NULL || str == NULL)
