@@ -4,7 +4,6 @@
  * @h: inked list head
  * Return: number of node
  */
-
 size_t print_list(const list_t *h)
 {
 	unsigned int count;
