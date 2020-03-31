@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * read_textfile - that reads a text file and prints
+ * create_file - that reads a text file and prints
  * it to the POSIX standard output.
  * @filename: pointer to file
  * @text_content: string
