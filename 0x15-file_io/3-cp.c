@@ -1,10 +1,10 @@
 #include "holberton.h"
 void _close(int file);
 /**
- * append_text_to_file- append text to file
- * @filename: pointer to file
- * @text_content: string to add
- * Return: 1 or -1
+ * main- copy file
+ * @argc: size av
+ * @av: string
+ * Return: int
  */
 int main(int argc, char *av[])
 {
@@ -45,6 +45,12 @@ int main(int argc, char *av[])
 	return (0);
 }
 
+
+/**
+ * _close - close file
+ * @file: fd of file tu close
+ * Return: void
+ */
 void _close(int file)
 {
 	int fail;
@@ -53,6 +59,6 @@ void _close(int file)
 	if (fail == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
-		exit(100);	
+		exit(100);
 	}
 }
