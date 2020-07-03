@@ -8,11 +8,11 @@ all: $(OBJ)
 	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) *~$(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
 
 fclean: clean oclean
 
-re: oclean
+re: oclean all
