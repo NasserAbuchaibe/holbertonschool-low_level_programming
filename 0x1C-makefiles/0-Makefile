@@ -1,2 +1,2 @@
 holberton: holberton.c main.c m.h
-	gcc main.c holberton.c -o holberton
+	gcc -Wall -Werror -Wextra -pedantic main.c holberton.c -o holberton
