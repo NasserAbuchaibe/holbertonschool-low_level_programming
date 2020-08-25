@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
-  * lbinary_search - function that searches for a value in an array of
+  * binary_search - function that searches for a value in an array of
   * integers using the binary search algorithm
   * @array: is a pointer to the first element of the array to search in.
   * @size: number of elements in array
